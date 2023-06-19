@@ -9,11 +9,11 @@ import aj1lgrey from './assets/aj1l-neutralgrey.webp';
 import aj1lrevmocha from './assets/aj1l-reversemocha.webp';
 import aj1lstarfish from './assets/aj1l-starfish.webp';
 import aj1lunc from './assets/aj1l-unc.webp';
-import nb530indigo from './assets/nb530-whiteindigo';
-import nb550white from './assets/nb550-whitegrey';
-import nb990v3seasalt from './assets/nb990v3seasalt';
-import nb2002rtaupe from './assets/nb2002rtaupe';
-import nb9060raincloud from './assets/nb9060raincloud';
+import nb530indigo from './assets/nb530-whiteindigo.webp';
+import nb550white from './assets/nb550-whitegrey.webp';
+import nb990v3seasalt from './assets/nb990v3-seasalt.webp';
+import nb2002rtaupe from './assets/nb2002r-calmtaupe.webp';
+import nb9060raincloud from './assets/nb9060-raincloud.webp';
 
 const shoes = [
   {
