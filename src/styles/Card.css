@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  /* height: 300px; */
+  padding: 50px;
+  gap: 10px;
+  background-color: white;
+  color: black;
+}
+
+.model {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.color-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color {
+  font-size: 1.5rem;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.image-div {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.image {
+  width: 300px;
+}
