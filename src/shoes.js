@@ -1,109 +1,117 @@
-// Import all images in image folder
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-  return images;
-}
+import aj1ama from './assets/aj1-amamaniere.webp';
+import aj1bred from './assets/aj1-bredtoe.webp';
+import aj1chicago from './assets/aj1-chicago.webp';
+import aj1shadow2 from './assets/aj1-shadow2.webp';
+import aj1unc from './assets/aj1-unc.webp';
+import aj1lblack from './assets/aj1l-blackphantom.webp';
+import aj1lchicago from './assets/aj1l-chicago.webp';
+import aj1lgrey from './assets/aj1l-neutralgrey.webp';
+import aj1lrevmocha from './assets/aj1l-reversemocha.webp';
+import aj1lstarfish from './assets/aj1l-starfish.webp';
+import aj1lunc from './assets/aj1l-unc.webp';
+import nb530indigo from './assets/nb530-whiteindigo';
+import nb550white from './assets/nb550-whitegrey';
+import nb990v3seasalt from './assets/nb990v3seasalt';
+import nb2002rtaupe from './assets/nb2002rtaupe';
+import nb9060raincloud from './assets/nb9060raincloud';
 
-const images = importAll(require.context('../images', false, /\.(gif|jpe?g|svg|webp)$/));
-
-const shoes = {
-  'aj1-amm': {
-    'model': 'A Ma Maniére x Air Jordan 1 High OG',
-    'color': 'Airness',
-    'image': images['AJ1-amamaniere.webp'],
-    'price': '$220'
+const shoes = [
+  {
+    model: 'A Ma Maniére x Air Jordan 1 High OG',
+    color: 'Airness',
+    image: aj1ama,
+    price: 220
   },
-  'aj1-bredtoe': {
-    'model': 'Air Jordan 1 Retro High OG',
-    'color': 'Bred Toe',
-    'image': images['AJ1-bredtoe.webp'],
-    'price': '$220'
+  {
+    model: 'Air Jordan 1 Retro High OG',
+    color: 'Bred Toe',
+    image: aj1bred,
+    price: 220
   },
-  'aj1-chicago': {
-    'model': 'Air Jordan 1 Retro High OG',
-    'color': 'Chicago Lost & Found',
-    'image': images['AJ1-chicago.webp'],
-    'price': '$220'
+  {
+    model: 'Air Jordan 1 Retro High OG',
+    color: 'Chicago Lost & Found',
+    image: aj1chicago,
+    price: 220
   },
-  'aj1-shadow2': {
-    'model': 'Air Jordan 1 Retro High OG',
-    'color': 'Shadow 2.0',
-    'image': images['AJ1-shadow2.webp'],
-    'price': '$220'
+  {
+    model: 'Air Jordan 1 Retro High OG',
+    color: 'Shadow 2.0',
+    image: aj1shadow2,
+    price: 220
   },
-  'aj1-unc': {
-    'model': 'Air Jordan 1 Retro High OG',
-    'color': 'University Blue',
-    'image': images['AJ1-unc.webp'],
-    'price': '$220'
+  {
+    model: 'Air Jordan 1 Retro High OG',
+    color: 'University Blue',
+    image: aj1unc,
+    price: 220
   },
-  'aj1l-black': {
-    'model': 'Travis Scott x Air Jordan 1 Low OG SP',
-    'color': 'Black Phantom',
-    'image': images['AJ1L-blackphantom.webp'],
-    'price': '$150'
+  {
+    model: 'Travis Scott x Air Jordan 1 Low OG SP',
+    color: 'Black Phantom',
+    image: aj1lblack,
+    price: 150
   },
-  'aj1l-reversemocha': {
-    'model': 'Travis Scott x Air Jordan 1 Low OG SP',
-    'color': 'Reverse Mocha',
-    'image': images['AJ1L-reversemocha.webp'],
-    'price': '$150'
+  {
+    model: 'Air Jordan 1 Low OG',
+    color: 'Chicago',
+    image: aj1lchicago,
+    price: 130
   },
-  'aj1l-chicago': {
-    'model': 'Air Jordan 1 Low OG',
-    'color': 'Chicago',
-    'image': images['AJ1L-chicago.webp'],
-    'price': '$130'
+  {
+    model: 'Air Jordan 1 Low OG',
+    color: 'Neutral Grey',
+    image: aj1lgrey,
+    price: 130
   },
-  'aj1l-neutralgrey': {
-    'model': 'Air Jordan 1 Low OG',
-    'color': 'Neutral Grey',
-    'image': images['AJ1L-neutralgrey.webp'],
-    'price': '$130'
+  {
+    model: 'Travis Scott x Air Jordan 1 Low OG SP',
+    color: 'Reverse Mocha',
+    image: aj1lrevmocha,
+    price: 150
   },
-  'aj1l-starfish': {
-    'model': 'Air Jordan 1 Low OG',
-    'color': 'Starfish',
-    'image': images['AJ1L-starfish.webp'],
-    'price': '$130'
+  {
+    model: 'Air Jordan 1 Low OG',
+    color: 'Starfish',
+    image: aj1lstarfish,
+    price: 130
   },
-  'aj1l-unc': {
-    'model': 'Air Jordan 1 Low OG',
-    'color': 'University Blue',
-    'image': images['AJ1L-unc.webp'],
-    'price': '$130'
+  {
+    model: 'Air Jordan 1 Low OG',
+    color: 'University Blue',
+    image: aj1lunc,
+    price: 130
   },
-  'nb530-whiteindigo': {
-    'model': 'NB 530',
-    'color': 'White Natural Indigo\'',
-    'image': images['NB530-whiteindigo.webp'],
-    'price': '$150'
+  {
+    model: 'NB 530',
+    color: 'White Natural Indigo',
+    image: nb530indigo,
+    price: 150
   },
-  'nb550-whitegrey': {
-    'model': 'NB 550',
-    'color': 'White Grey\'',
-    'image': images['NB550-whitegrey.webp'],
-    'price': '$150'
+  {
+    model: 'NB 550',
+    color: 'White Grey',
+    image: nb550white,
+    price: 150
   },
-  'nb990v3-seasalt': {
-    'model': 'Teddy Santis x NB 990v3 Made in USA',
-    'color': 'Sea Salt',
-    'image': images['NB990v3-whitegrey.webp'],
-    'price': '$150'
+  {
+    model: 'Teddy Santis x NB 990v3 Made in USA',
+    color: 'Sea Salt',
+    image: nb990v3seasalt,
+    price: 150
   },
-  'nb2002r-calmtaupe': {
-    'model': 'NB 2002R',
-    'color': 'Calm Taupe',
-    'image': images['NB2002r-calmtaupe.webp'],
-    'price': '$150'
+  {
+    model: 'NB 2002R',
+    color: 'Calm Taupe',
+    image: nb2002rtaupe,
+    price: 150
   },
-  'nb9060-raincloud': {
-    'model': 'NB 9060',
-    'color': 'Rain Cloud',
-    'image': images['NB9060-raincloud.webp'],
-    'price': '$150'
+  {
+    model: 'NB 9060',
+    color: 'Rain Cloud',
+    image: nb9060raincloud,
+    price: 150
   }
-}
+]
 
 export default shoes;
