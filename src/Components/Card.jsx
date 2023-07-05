@@ -2,7 +2,7 @@ import React from 'react';
 import shoes from '../shoes';
 import '../styles/Card.css';
 
-export default function Card(props) {
+export default function Card({ model, color, price, image, addToCart }) {
   // Create a state that controls the size of the shoe and adding it to cart
   // Maybe create an object that contains size, price, and boolean if it is in cart or not
   const [size, setSize] = React.useState('');
@@ -10,17 +10,25 @@ export default function Card(props) {
   const handleSize = (e) => {
     setSize(e.target.value);
   }
-  console.log(size);
+  // console.log(size);
+
+  const handleClick = () => {
+    addToCart({
+      model: model,
+      size: size,
+      price: price
+    })
+  }
 
   return (
     <div className='card'>
-      <p className='model'>{props.model}</p>
+      <p className='model'>{model}</p>
       <div className='color-price'>
-        <p className='color'>{`'${props.color}'`}</p>
-        <p className='price'>{`$${props.price}`}</p>
+        <p className='color'>{`'${color}'`}</p>
+        <p className='price'>{`$${price}`}</p>
       </div>
       <div className='image-div'>
-        <img src={props.image} className='image' />
+        <img src={image} className='image' />
       </div>
       <div className='card--buttons'>
         <select onChange={handleSize} className='card--select'>
@@ -48,7 +56,7 @@ export default function Card(props) {
           <option value='14' key='14'>14</option>
           <option value='15' key='15'>15</option>
         </select>
-        <button className='add-to-cart'>Add to Cart</button>
+        <button className='add-to-cart' onClick={handleClick}>Add to Cart</button>
       </div>
     </div>
   )
