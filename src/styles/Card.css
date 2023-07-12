@@ -9,7 +9,7 @@
   grid-template-rows: 0.5fr 0.5fr 2fr auto;
   border: 1px solid black;
   max-height: 550px;
-  padding: 50px 25px;
+  padding: 25px;
   gap: 10px;
   background-color: white;
   color: black;
