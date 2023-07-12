@@ -2,7 +2,7 @@ import React from 'react';
 import shoes from '../shoes';
 import '../styles/Card.css';
 
-export default function Card({ model, color, price, image, cart, total, addToCart }) {
+export default function Card({ key, model, color, price, image, cart, total, addToCart }) {
   // Create a state that controls the size of the shoe and adding it to cart
   // Maybe create an object that contains size, price, and boolean if it is in cart or not
   const [size, setSize] = React.useState('');
@@ -13,9 +13,12 @@ export default function Card({ model, color, price, image, cart, total, addToCar
 
   const handleClick = () => {
     addToCart({
+      key: key,
       model: model,
-      size: size,
-      price: price
+      color: color,
+      image: image,
+      price: price,
+      size: size
     })
   }
 
