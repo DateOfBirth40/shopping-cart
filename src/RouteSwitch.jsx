@@ -10,9 +10,11 @@ const RouteSwitch = () => {
   const [cart, setCart] = React.useState([]);
   const [total, setTotal] = React.useState(0);
 
+  // If key and size are the same, find a way to update the quantity
   function addToCart(item) {
     if (item.size != '') {
-      setCart(prevCart => [...prevCart, {key: item.key,
+      setCart(prevCart => [...prevCart, {id: item.id,
+                                        qty: 1,
                                         model: item.model,
                                         color: item.color,
                                         image: item.image,
