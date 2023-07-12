@@ -11,8 +11,16 @@ const RouteSwitch = () => {
   const [total, setTotal] = React.useState(0);
 
   function addToCart(item) {
-    setCart(prevCart => [...prevCart, {model: item.model, size: item.size}]);
-    setTotal(current => current + item.price);
+    if (item.size != '') {
+      setCart(prevCart => [...prevCart, {key: item.key,
+                                        model: item.model,
+                                        color: item.color,
+                                        image: item.image,
+                                        price: item.price,
+                                        size: item.size
+                                      }]);
+      setTotal(current => current + item.price);
+    }
   }
 
   return (
