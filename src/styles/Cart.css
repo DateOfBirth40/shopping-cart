@@ -6,7 +6,10 @@
 .container--cart {
   width: 100vw;
   display: grid;
+  background-color: white;
+  color: black;
   grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 175px 80px;
 }
 
 .container--cart-item {
@@ -14,21 +17,24 @@
   justify-content: space-between;
   background-color: white;
   color: black;
-  border: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 25px 12.5px;
 }
 
+/* Make each line of the summary its own div that is spaced-between */
 .cart-grid--cart {
   grid-area: 1 / 1 / -1 / 2;
 }
 
 .summary--cart {
+  grid-area: 1 / 2 / 1 / -1;
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  grid-area: 1 / 2 / 1 / -1;
-  background-color: white;
-  color: black;
+  /* background-color: white;
+  color: black; */
+  /* border: 1px solid black; */
 }
 
 .summary-titles h3, .summary-values h3 {
@@ -37,6 +43,15 @@
 
 .summary-values {
   text-align: end;
+}
+
+.total--cart {
+  grid-area: 2 / 2 / -1 / -1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 
 .image-div--cart-item {
@@ -72,4 +87,12 @@
 
 .color--cart-item {
   color: gray;
+}
+
+.options--cart-item {
+  display: flex;
+}
+
+.remove--cart-item {
+  width: 175px;
 }
